@@ -1,0 +1,163 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Avoid adding ID selector rules in this style sheet, since they could
+ * inadvertently match elements in the article content. */
+:root {
+    --body-padding: 64px;
+    --popup-border: rgba(0, 0, 0, 0.12);
+    --opaque-popup-border: #e0e0e0;
+    --popup-shadow: rgba(49, 49, 49, 0.3);
+    --grey-90-a10: rgba(12, 12, 13, 0.1);
+    --grey-90-a20: rgba(12, 12, 13, 0.2);
+    --grey-90-a30: rgba(12, 12, 13, 0.3);
+    --grey-90-a80: rgba(12, 12, 13, 0.8);
+    --grey-30: #d7d7db;
+    --blue-40: #45a1ff;
+    --blue-40-a30: rgba(69, 161, 255, 0.3);
+    --blue-60: #0060df;
+    --active-color: #0B83FF;
+    --font-size: 14;
+    --content-width: 30em;
+    --line-height: 1.6em;
+    --tooltip-background: var(--grey-90-a80);
+    --tooltip-foreground: white;
+    --toolbar-button-hover: var(--grey-90-a10);
+    --toolbar-button-active: var(--grey-90-a20);
+}
+
+img {
+    max-width: 100%
+}
+
+table {
+    margin: 1em 0;
+}
+
+table thead {
+    border: none;
+}
+
+table tbody {
+    border-top: 3px solid #b0b0b0;
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    padding: 6px;
+    vertical-align: top;
+}
+
+table th {
+    weight: bold;
+    text-align: left !important;
+}
+
+table tr:nth-child(odd) td {
+    background-color: #eee;
+}
+
+.figure {
+    padding: 0;
+}
+
+.figure .figure-number {
+    font-style: italic;
+}
+
+#postamble {
+    display: none;
+}
+
+.org-svg {
+    width: 100%;
+}
+
+.timestamp {
+    color: #666;
+}
+
+blockquote {
+    position: relative;
+    padding: 0.1em 2em;
+    border-left: 0.2em solid var(--blue-40);
+    line-height: 1.4em;
+    background-color: #f3f3f3;
+}
+
+blockquote p {
+    font-style: italic;
+}
+
+blockquote p + p {
+    color: #777;
+    font-style: normal;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+h1 {
+    color: #1960ce;
+}
+
+h2 {
+    color: #7db52c;
+}
+
+h3 {
+    color: var(--blue-40);
+}
+
+body {
+    --main-background: #eee;
+    --main-foreground: #333;
+    --toolbar-border: var(--grey-90-a20);
+    --toolbar-box-shadow: var(--grey-90-a10);
+    --popup-button-hover: hsla(0,0%,70%,.4);
+    --popup-button-active: hsla(240,5%,5%,.15);
+    --popup-bgcolor: white;
+    --popup-button: #edecf0;
+    --selected-fonttype-background: var(--blue-40-a30);
+    --selected-border: var(--blue-40);
+    --popup-line: var(--grey-30);
+    --font-value-border: var(--grey-30);
+    --font-color: #000000;
+    --icon-fill: #3b3b3c;
+    --icon-disabled-fill: #8080807F;
+    /* light colours */
+}
+
+body {
+    margin: 0;
+    padding: 0 var(--body-padding);
+    background-color: var(--main-background);
+    color: var(--main-foreground);
+}
+
+#content {
+    margin: 0 auto;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+
+    /* max-width: var(--content-width); */
+    max-width: 40em;
+    background-color: white;
+    padding: 3em;
+    box-shadow: 1px 0 11px #ccc;
+}
+
+@media print {
+    body {
+        padding: 0;
+    }
+
+    #content {
+        padding: 0;
+        box-shadow: none;
+        max-width: none;
+        background-color: transparent;
+    }
+}
