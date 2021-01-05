@@ -1,6 +1,28 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this file,
- * You can obtain one at http://mozilla.org/MPL/2.0/. */
+/*
+ * Fonts should be present at the project root under the fonts/ folder. They
+ * should not be added to the repository, but you can create symbolic links.
+ */
+
+@font-face {
+    font-family: "bookerly-regular";
+    src: url("../../../fonts/Bookerly-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "bookerly-bold";
+    src: url("../../../fonts/Bookerly-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "bookerly-italic";
+    src: url("../../../fonts/Bookerly-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* Avoid adding ID selector rules in this style sheet, since they could
  * inadvertently match elements in the article content. */
@@ -25,6 +47,28 @@
     --tooltip-foreground: white;
     --toolbar-button-hover: var(--grey-90-a10);
     --toolbar-button-active: var(--grey-90-a20);
+}
+
+body {
+    font-family: "bookerly-regular", serif;
+}
+
+b {
+    font-family: "bookerly-bold", serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+i {
+    font-family: "bookerly-italic", serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4 {
+    font-family: "bookerly-bold", serif;
+    font-weight: normal;
+    font-style: normal;
 }
 
 img {
@@ -52,7 +96,8 @@ td {
 }
 
 table th {
-    weight: bold;
+    font-family: "bookerly-bold", serif;
+    font-weight: normal;
     text-align: left !important;
 }
 
@@ -65,7 +110,8 @@ table tr:nth-child(odd) td {
 }
 
 .figure .figure-number {
-    font-style: italic;
+    font-family: "bookerly-italic", serif;
+    font-style: normal;
 }
 
 #postamble {
@@ -89,7 +135,8 @@ blockquote {
 }
 
 blockquote p {
-    font-style: italic;
+    font-family: "bookerly-italic", serif;
+    font-style: normal;
 }
 
 blockquote p + p {
